@@ -37,9 +37,8 @@ recursive_query_engine = recursive_index.as_query_engine(
 )
 
 # Query the model
-
 default_query = 'Compare the 2023 vs 2024 revenue from income tax and return the results in tabular format. Then analyze the changes from 2023 and generate concise business insights.'
-query = st.text_input('Enter your query here', default_query)
+query = st.text_area('Enter your query here', default_query, height=80)
 if st.button("Submit"):
     with st.spinner("Processing your query..."):
         response = recursive_query_engine.query(query)
