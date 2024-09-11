@@ -1,0 +1,4 @@
+python-dotenv
+llama_parse
+llama_index
+streamlit
